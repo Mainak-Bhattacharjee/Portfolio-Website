@@ -13,9 +13,7 @@ This project showcases my skills, projects, and experience in **Web Development,
 ## 🔧 Built With
 - **HTML5** – structure
 - **CSS3** – styling & responsiveness
-- **JavaScript (ES6)** – interactivity & animations
-- **Font Awesome** – icons
-- **[Your other libraries/tools here]**
+- **JavaScript** – interactivity & animations
 
 ---
 
