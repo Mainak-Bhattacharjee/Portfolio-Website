@@ -15,7 +15,7 @@
         <div class="container">
             <nav>
                 <a href="index.html"><img src="img/Logo.png" class="logo"></a>
-                <ul id = "sidemenu">
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
@@ -115,27 +115,33 @@
             <h1 class="sub-title">My Works</h1>
             <div class="work-list">
                 <div class="work">
-                    <img src="img/work-1.png">
+                    <img src="img/Portfolio Website.png">
                     <div class="layer">
-                        <h3>Soical Media App</h3>
-                        <p>The app connects you to talented people around the world. Download it from Play Store</p>
+                        <h3>Portfolio Website</h3>
+                        <p>Built a responsive personal website to showcase projects, resume, and contact
+                            information</p>
+                        <a href="https://github.com/Mainak-Bhattacharjee/Portfolio-Website.git" target="_blank"><i
+                                class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="img/JARVIS.png">
+                    <div class="layer">
+                        <h3>JARVIS AI Assistant</h3>
+                        <p>Working on a Python-based personal assistant inspired by JARVIS, integrating voice
+                            commands, automation scripts, and basic machine learning features</p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="img/work-2.png">
+                    <img src="img/University Website.png">
                     <div class="layer">
-                        <h3>Music App</h3>
-                        <p>The app connects you to talented people around the world. Download it from Play Store</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="img/work-3.png">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you to talented people around the world. Download it from Play Store</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        <h3>University Website</h3>
+                        <p>Developed a responsive and user-friendly university website to provide students
+                            and faculty with centralized access to academic resources, notices, and depart-
+                            mental updates</p>
+                        <a href="https://github.com/Mainak-Bhattacharjee/University-Website.git" target="_blank"><i
+                                class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
@@ -145,7 +151,7 @@
 
     <!-- ------------------------------------Contact------------------------------------ -->
 
-    <div id ="contact">
+    <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact-left">
@@ -154,12 +160,13 @@
                     <p><i class="fa-solid fa-phone"></i>+91 75789 54437</p>
                     <p><i class="fa-solid fa-location-dot"></i>Silchar, Assam</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-square-linkedin"></i></a>
-                        <a href="#"><i class="fa-brands fa-square-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://linkedin.com/in/mainakbhattacharjee"><i
+                                class="fa-brands fa-square-linkedin"></i></a>
+                        <a href="https://github.com/Mainak-Bhattacharjee"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.instagram.com/mainak_bhatt"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://x.com/Mainak_bhatt"><i class="fa-brands fa-x-twitter"></i></a>
                     </div class="cv-buttons">
-                    <a href="doc/Resume - Mainak.pdf" class="btn btn2">View CV</a>
+                    <a href="doc/Resume - Mainak.pdf" class="btn btn2" target="_blank">View CV</a>
                     <a href="doc/Resume - Mainak.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
@@ -167,7 +174,7 @@
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" >Submit</button>
+                        <button type="submit">Submit</button>
                     </form>
                 </div>
                 <span id="msg"></span>
@@ -175,57 +182,8 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
+
 </body>
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link")
-        document.getElementById(tabname).classList.add("active-tab")
-    }
-
-</script>
-
-<script>
-
-    var sidemenu = document.getElementById("sidemenu")
-
-    function openmenu(){
-        sidemenu.style.right = "0"
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px"
-    }
-
-</script>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxFW0dxDN-rkfEdVl0TCfh4NwdaCTMGuDPXVxX-0pZ-aj3xPle_WB58xkWukWYBxtcYGw/exec'
-  const form = document.forms['submit-to-google-sheet']
-
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message Sent Sucessfully"
-        setTimeout(function(){
-            msg.innerHTML=""
-        },5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
 
 </html>

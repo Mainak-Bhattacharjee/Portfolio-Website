@@ -411,11 +411,13 @@ nav .icon {
 
     nav .icon {
         display: block;
+        font-size: 30px;
     }
 
     nav ul {
         background: #ff004f;
         position: fixed;
+        font-size: 30px;
         top: 0;
         right: -200px;
         width: 200px;
